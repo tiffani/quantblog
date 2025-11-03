@@ -10,5 +10,8 @@
   },
   "index.qmd": {
     "index.html": "646cd469"
+  },
+  "posts/post-with-code/backtesting.qmd": {
+    "backtesting.html": "a8f2f625"
   }
 }

@@ -2,9 +2,9 @@ project:
   type: website
 
 website:
-  description: "A blog built with Quarto"
-  site-url: https://your-website-url.example.com # you must change this appropriately for RSS feeds to work properly
-  title: "quantblog"
+  description: "A place where I learn..."
+  site-url: "https://tiffani.dev/" # you must change this appropriately for RSS feeds to work properly
+  title: "Musings"
   navbar:
     right:
       - about.qmd
