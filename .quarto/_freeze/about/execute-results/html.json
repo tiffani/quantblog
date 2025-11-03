@@ -1,0 +1,12 @@
+{
+  "hash": "02dec064d2e8f2dd25446c73793dcf5d",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"About\"\nimage: profile.jpg\nabout:\n  template: jolla\n  links:\n    - icon: twitter\n      text: Twitter\n      href: https://twitter.com\n    - icon: linkedin\n      text: LinkedIn\n      href: https://linkedin.com/in/tiffani\n    - icon: github\n      text: Github\n      href: https://github.com/tiffani\n\n---\n\nAbout this blog\n\n::: {#cell-fig-polar .cell execution_count=1}\n``` {.python .cell-code}\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n```\n\n::: {.cell-output .cell-output-display}\n![A line plot on a polar axis](about_files/figure-html/fig-polar-output-1.png){#fig-polar width=450 height=439}\n:::\n:::\n\n\n",
+    "supporting": [
+      "about_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

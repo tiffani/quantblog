@@ -1,0 +1,47 @@
+---
+title: "Post With Code"
+author: "Harlow Malloc"
+date: "2025-11-02"
+categories: [news, code, analysis]
+image: "image.jpg"
+---
+
+This is a post with executable code.
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+#| eval: false
+
+import databento as db
+
+db.enable_logging("INFO")
+
+symbols = ["GS    251219C00850000",]
+
+live_client = db.Live("db-La5MiWdqshV8EqAmLHHkvC3DbcbH6")
+
+live_client.subscribe(
+    dataset = "OPRA.PILLAR",
+    schema = "status",
+    symbols = symbols,
+    stype_in = "raw_symbol",
+)
+
+live_client.subscribe(
+    dataset = "OPRA.PILLAR",
+    schema = "tcbbo",
+    symbols = symbols,
+    stype_in = "raw_symbol",
+)
+
+live_client.subscribe(
+    dataset = "OPRA.PILLAR",
+    schema = "statistics",
+    symbols = symbols,
+    stype_in = "raw_symbol",
+)
+
+live_client.add_callback(print)
+live_client.start()
+```

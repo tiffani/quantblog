@@ -1,0 +1,12 @@
+{
+  "hash": "7e52dd4357d52ddad53aa4b3b114aa9f",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Post With Code\"\nauthor: \"Harlow Malloc\"\ndate: \"2025-11-02\"\ncategories: [news, code, analysis]\nimage: \"image.jpg\"\n---\n\nThis is a post with executable code.\n\n::: {#fig-polar .cell execution_count=1}\n``` {.python .cell-code}\nimport databento as db\n\ndb.enable_logging(\"INFO\")\n\nsymbols = [\"GS    251219C00850000\",]\n\nlive_client = db.Live(\"db-La5MiWdqshV8EqAmLHHkvC3DbcbH6\")\n\nlive_client.subscribe(\n    dataset = \"OPRA.PILLAR\",\n    schema = \"status\",\n    symbols = symbols,\n    stype_in = \"raw_symbol\",\n)\n\nlive_client.subscribe(\n    dataset = \"OPRA.PILLAR\",\n    schema = \"tcbbo\",\n    symbols = symbols,\n    stype_in = \"raw_symbol\",\n)\n\nlive_client.subscribe(\n    dataset = \"OPRA.PILLAR\",\n    schema = \"statistics\",\n    symbols = symbols,\n    stype_in = \"raw_symbol\",\n)\n\nlive_client.add_callback(print)\nlive_client.start()\n```\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
