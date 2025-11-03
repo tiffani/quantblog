@@ -3,7 +3,7 @@ title: "Live @ the OPRA - Watching options order flow"
 author: "Tiffani Ashley Bell"
 date: "2025-11-02"
 categories: [code, analysis]
-image: "image.jpg"
+image: "opra-data.png"
 ---
 
 This is what I use to watch real-time options order flow every weekday.
