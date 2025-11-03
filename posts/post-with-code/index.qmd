@@ -1,13 +1,12 @@
 ---
-title: "Post With Code"
-author: "Harlow Malloc"
+title: "Live @ the OPRA - Watching options order flow"
+author: "Tiffani Ashley Bell"
 date: "2025-11-02"
-categories: [news, code, analysis]
+categories: [code, analysis]
 image: "image.jpg"
 ---
 
-This is a post with executable code.
-
+This is what I use to watch real-time options order flow every weekday.
 ```{python}
 #| label: fig-polar
 #| fig-cap: "A line plot on a polar axis"
@@ -19,7 +18,7 @@ db.enable_logging("INFO")
 
 symbols = ["GS    251219C00850000",]
 
-live_client = db.Live("db-La5MiWdqshV8EqAmLHHkvC3DbcbH6")
+live_client = db.Live(API_KEY)
 
 live_client.subscribe(
     dataset = "OPRA.PILLAR",

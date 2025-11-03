@@ -1,6 +1,6 @@
 ---
 title: "Welcome To My Blog"
-author: "Tristan O'Malley"
+author: "Tiffani Ashley Bell"
 date: "2025-10-30"
 categories: [news]
 ---
