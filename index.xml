@@ -24,7 +24,7 @@
 <p>I trade options via Interactive Brokers and their <a href="https://www.ibkrguides.com/traderworkstation/getting-started.htm">Trader Workstation</a> software. At a certain point, though, I realized their option chain interface did not always show the <em>true</em> last price a particular option traded at. Bid-ask info would be updated continuously, but not necessarily last price. I was then potentially <strong>getting a false sense of what was actually happening at any given strike</strong> and actually missing out on useful information. And the thing is, I pay for real-time data from the exchanges via IBKR, so there was no good reason to be seeing stale price data.</p>
 <p>I remembered that <a href="https://www.databento.com">Databento</a> offers real-time OPRA data feeds, so I decided to sign up for that. It’s $199/mo, but I would argue it’s been totally worth it to see options order flow in real-time all throughout the trading day. You also get statistics about all the options you’re interested in when the exchanges close for the day.</p>
 <p>This code sample doesn’t deviate much from the sample Databento offers to get you started with live data, but for a while this is what I used to watch real-time options order flow every weekday.</p>
-<div id="3611f0be" class="cell" data-execution_count="1">
+<div id="2bb76f6e" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> databento <span class="im" style="color: #00769E;
@@ -121,38 +121,155 @@ font-style: inherit;">print</span>)</span>
 </figure>
 </div>
 <p>Unfortunately, the raw output from the feed is very hard to read and follow what is happening with the options you’re interested in.</p>
-<p>In particular, the feed shows which option is which in the order flow via the <code>instrument_id</code>, but it’s a number, not a somewhat human-readable identifier (with issuer, date, and strike such as <code>GS 251219C00850000</code>). The feed gives you a listing of what <code>instrument_id</code> is tied to which option and strike, but that happens when the feed first launches. After that, there’s no easy way to know what you’re looking at. That calls for some modifications!</p>
+<p>In particular, the feed shows which option is which in the order flow via the <code>instrument_id</code>, but it’s a number, not a somewhat human-readable identifier (with issuer, date, and strike such as <code>GS 251219C00850000</code>). Or even better, a <em>Goldman Sachs December 2025 850 call</em>. The feed gives you a listing of what <code>instrument_id</code> is tied to which option and strike, but that happens when the feed first launches. After that, there’s no easy way to know what you’re looking at. That calls for some modifications!</p>
 <p>I cooked up something that makes order flow much more readable.</p>
-<div id="a52825c8" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Code forthcoming</span></span>
-<span id="cb2-2"></span>
-<span id="cb2-3"><span class="im" style="color: #00769E;
+<div id="aef0aa25" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> os</span>
-<span id="cb2-4"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> time</span>
-<span id="cb2-5"><span class="im" style="color: #00769E;
+<span id="cb2-2"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> databento <span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">as</span> db</span>
-<span id="cb2-6"></span>
-<span id="cb2-7">db.enable_logging(<span class="st" style="color: #20794D;
+<span id="cb2-3"></span>
+<span id="cb2-4"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">"INFO"</span>)</span>
+font-style: inherit;"># Prices don't come in 2-decimal form</span></span>
+<span id="cb2-5">OPT_PRICE_DIV <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000000000</span></span>
+<span id="cb2-6"></span>
+<span id="cb2-7">symbol_mappings <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {}</span>
 <span id="cb2-8"></span>
 <span id="cb2-9"><span class="kw" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">def</span> order_flow_print(order_flow_data):</span>
-<span id="cb2-10">    <span class="bu" style="color: null;
+<span id="cb2-10">    msg_type <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">print</span>(order_flow_data)</span>
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">type</span>(order_flow_data)</span>
 <span id="cb2-11"></span>
-<span id="cb2-12"><span class="cf" style="color: #003B4F;
+<span id="cb2-12">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">if</span>(msg_type <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> db.SymbolMappingMsg):</span>
+<span id="cb2-13">        instrument_id <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> order_flow_data.instrument_id</span>
+<span id="cb2-14">        issuer_symbol <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> order_flow_data.stype_out_symbol</span>
+<span id="cb2-15">        symbol_mappings[instrument_id] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> issuer_symbol</span>
+<span id="cb2-16">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">elif</span>(msg_type <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">==</span> db.CMBP1Msg):</span>
+<span id="cb2-17">        header <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> order_flow_data.hd</span>
+<span id="cb2-18">        instrument_id <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> header.instrument_id</span>
+<span id="cb2-19">        order_price <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> order_flow_data.price <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> OPT_PRICE_DIV</span>
+<span id="cb2-20">        order_size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> order_flow_data.size</span>
+<span id="cb2-21">        symbol_str <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> symbol_mappings[instrument_id]</span>
+<span id="cb2-22"></span>
+<span id="cb2-23">        bid_ask <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> order_flow_data.levels[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>]</span>
+<span id="cb2-24">        bid_price <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> bid_ask.bid_px <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> OPT_PRICE_DIV</span>
+<span id="cb2-25">        ask_price <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> bid_ask.ask_px <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> OPT_PRICE_DIV</span>
+<span id="cb2-26">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span> symbol_str <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> - </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span> order_size <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> @ $</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span> order_price <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb2-27">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"Bid: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span> bid_price <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">x</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span> bid_ask<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span>bid_sz <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">  Ask: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span> ask_price <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">x</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span> bid_ask<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span>ask_sz<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>)</span>
+<span id="cb2-28">    </span>
+<span id="cb2-29"><span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">if</span> <span class="va" style="color: #111111;
@@ -162,102 +279,115 @@ background-color: null;
 font-style: inherit;">==</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"__main__"</span>:</span>
-<span id="cb2-13">    <span class="cf" style="color: #003B4F;
+<span id="cb2-30">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">try</span>:</span>
-<span id="cb2-14">        databento_api_key <span class="op" style="color: #5E5E5E;
+<span id="cb2-31">        databento_api_key <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> os.getenv(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"DATABENTO_API_KEY"</span>)</span>
-<span id="cb2-15">        live_client <span class="op" style="color: #5E5E5E;
+<span id="cb2-32">        live_client <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> db.Live(databento_api_key)</span>
-<span id="cb2-16">    <span class="cf" style="color: #003B4F;
+<span id="cb2-33">    <span class="cf" style="color: #003B4F;
 background-color: null;
 font-weight: bold;
 font-style: inherit;">except</span> <span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">KeyError</span>:</span>
-<span id="cb2-17">        <span class="bu" style="color: null;
+<span id="cb2-34">        <span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Oops! DATABENTO_API_KEY not found..."</span>)</span>
-<span id="cb2-18"></span>
-<span id="cb2-19">    symbols <span class="op" style="color: #5E5E5E;
+<span id="cb2-35"></span>
+<span id="cb2-36">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Show all the order flow for a given issuer (in this case, Goldman Sachs and JP Morgan)</span></span>
+<span id="cb2-37">    symbols <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"GS    251219C00850000"</span>,]</span>
-<span id="cb2-20"></span>
-<span id="cb2-21">    live_client.subscribe(</span>
-<span id="cb2-22">        dataset <span class="op" style="color: #5E5E5E;
+font-style: inherit;">"GS.OPT"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"JPM.OPT"</span>, ]</span>
+<span id="cb2-38"></span>
+<span id="cb2-39">    live_client.subscribe(</span>
+<span id="cb2-40">        dataset <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"OPRA.PILLAR"</span>,</span>
-<span id="cb2-23">        schema <span class="op" style="color: #5E5E5E;
+<span id="cb2-41">        schema <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"status"</span>,</span>
-<span id="cb2-24">        symbols <span class="op" style="color: #5E5E5E;
+<span id="cb2-42">        symbols <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> symbols,</span>
-<span id="cb2-25">        stype_in <span class="op" style="color: #5E5E5E;
+<span id="cb2-43">        stype_in <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"raw_symbol"</span>,</span>
-<span id="cb2-26">    )</span>
-<span id="cb2-27"></span>
-<span id="cb2-28">    live_client.subscribe(</span>
-<span id="cb2-29">        dataset <span class="op" style="color: #5E5E5E;
+font-style: inherit;">"parent"</span>,</span>
+<span id="cb2-44">    )</span>
+<span id="cb2-45"></span>
+<span id="cb2-46">    live_client.subscribe(</span>
+<span id="cb2-47">        dataset <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"OPRA.PILLAR"</span>,</span>
-<span id="cb2-30">        schema <span class="op" style="color: #5E5E5E;
+<span id="cb2-48">        schema <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"tcbbo"</span>,</span>
-<span id="cb2-31">        symbols <span class="op" style="color: #5E5E5E;
+<span id="cb2-49">        symbols <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> symbols,</span>
-<span id="cb2-32">        stype_in <span class="op" style="color: #5E5E5E;
+<span id="cb2-50">        stype_in <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"raw_symbol"</span>,</span>
-<span id="cb2-33">    )</span>
-<span id="cb2-34"></span>
-<span id="cb2-35">    live_client.subscribe(</span>
-<span id="cb2-36">        dataset <span class="op" style="color: #5E5E5E;
+font-style: inherit;">"parent"</span>,</span>
+<span id="cb2-51">    )</span>
+<span id="cb2-52"></span>
+<span id="cb2-53">    live_client.subscribe(</span>
+<span id="cb2-54">        dataset <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"OPRA.PILLAR"</span>,</span>
-<span id="cb2-37">        schema <span class="op" style="color: #5E5E5E;
+<span id="cb2-55">        schema <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"statistics"</span>,</span>
-<span id="cb2-38">        symbols <span class="op" style="color: #5E5E5E;
+<span id="cb2-56">        symbols <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> symbols,</span>
-<span id="cb2-39">        stype_in <span class="op" style="color: #5E5E5E;
+<span id="cb2-57">        stype_in <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"raw_symbol"</span>,</span>
-<span id="cb2-40">    )</span>
-<span id="cb2-41"></span>
-<span id="cb2-42">    live_client.add_callback(order_flow_print)</span>
-<span id="cb2-43">    live_client.start()</span></code></pre></div></div>
+font-style: inherit;">"parent"</span>,</span>
+<span id="cb2-58">    )</span>
+<span id="cb2-59"></span>
+<span id="cb2-60">    live_client.add_callback(order_flow_print)</span>
+<span id="cb2-61">    live_client.start()</span></code></pre></div></div>
 </div>
+<p>And with much more readable output:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://tiffani.dev/posts/post-with-code/opra-data-readable.png" class="img-fluid figure-img"></p>
+<figcaption>Updated OPRA order data flow from Databento in MacOS Terminal</figcaption>
+</figure>
+</div>
+<p>Of course, it could be improved even from here, but that’s for another day. [CFA(https://www.cfainstitute.org/)] and [CMT(https://www.cmtassociation.org)] studying awaits…</p>
 
 
 
