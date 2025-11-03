@@ -18,7 +18,7 @@
     "href": "posts/post-with-code/index.html",
     "title": "Live @ the OPRA - Watching options order flow",
     "section": "",
-    "text": "This is what I use to watch real-time options order flow every weekday.\n\n\n\nimport databento as db\n\ndb.enable_logging(\"INFO\")\n\nsymbols = [\"GS    251219C00850000\",]\n\nlive_client = db.Live(API_KEY)\n\nlive_client.subscribe(\n    dataset = \"OPRA.PILLAR\",\n    schema = \"status\",\n    symbols = symbols,\n    stype_in = \"raw_symbol\",\n)\n\nlive_client.subscribe(\n    dataset = \"OPRA.PILLAR\",\n    schema = \"tcbbo\",\n    symbols = symbols,\n    stype_in = \"raw_symbol\",\n)\n\nlive_client.subscribe(\n    dataset = \"OPRA.PILLAR\",\n    schema = \"statistics\",\n    symbols = symbols,\n    stype_in = \"raw_symbol\",\n)\n\nlive_client.add_callback(print)\nlive_client.start()\n\n\nFigure 1"
+    "text": "This is what I use to watch real-time options order flow every weekday.\n\nimport databento as db\n\ndb.enable_logging(\"INFO\")\n\nsymbols = [\"GS    251219C00850000\",]\n\nlive_client = db.Live(API_KEY)\n\nlive_client.subscribe(\n    dataset = \"OPRA.PILLAR\",\n    schema = \"status\",\n    symbols = symbols,\n    stype_in = \"raw_symbol\",\n)\n\nlive_client.subscribe(\n    dataset = \"OPRA.PILLAR\",\n    schema = \"tcbbo\",\n    symbols = symbols,\n    stype_in = \"raw_symbol\",\n)\n\nlive_client.subscribe(\n    dataset = \"OPRA.PILLAR\",\n    schema = \"statistics\",\n    symbols = symbols,\n    stype_in = \"raw_symbol\",\n)\n\nlive_client.add_callback(print)\nlive_client.start()\n\nTurns into:\n\n\n\nOPRA data flow from Databento in MacOS Terminal"
   },
   {
     "objectID": "index.html",

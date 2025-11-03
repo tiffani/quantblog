@@ -8,8 +8,6 @@ image: "opra-data.png"
 
 This is what I use to watch real-time options order flow every weekday.
 ```{python}
-#| label: fig-polar
-#| fig-cap: "A line plot on a polar axis"
 #| eval: false
 
 import databento as db
@@ -44,3 +42,8 @@ live_client.subscribe(
 live_client.add_callback(print)
 live_client.start()
 ```
+
+
+Turns into:
+
+![OPRA data flow from Databento in MacOS Terminal](opra-data.png)
