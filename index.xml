@@ -22,9 +22,7 @@
 
 
 <p>This is what I use to watch real-time options order flow every weekday.</p>
-<div id="fig-polar" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="b254ee00" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> databento <span class="im" style="color: #00769E;
@@ -113,9 +111,11 @@ background-color: null;
 font-style: inherit;">print</span>)</span>
 <span id="cb1-31">live_client.start()</span></code></pre></div></div>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption>
+<p>Turns into:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://tiffani.dev/posts/post-with-code/opra-data.png" class="img-fluid figure-img"></p>
+<figcaption>OPRA data flow from Databento in MacOS Terminal</figcaption>
 </figure>
 </div>
 
