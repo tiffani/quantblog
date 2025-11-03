@@ -198,7 +198,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>I trade options via Interactive Brokers and their <a href="https://www.ibkrguides.com/traderworkstation/getting-started.htm">Trader Workstation</a> software. At a certain point, though, I realized their option chain interface did not always show the <em>true</em> last price a particular option traded at. Bid-ask info would be updated continuously, but not necessarily last price. I was then potentially <strong>getting a false sense of what was actually happening at any given strike</strong> and actually missing out on useful information. And the thing is, I pay for real-time data from the exchanges via IBKR, so there was no good reason to be seeing stale price data.</p>
 <p>I remembered that <a href="https://www.databento.com">Databento</a> offers real-time OPRA data feeds, so I decided to sign up for that. It’s $199/mo, but I would argue it’s been totally worth it to see options order flow in real-time all throughout the trading day. You also get statistics about all the options you’re interested in when the exchanges close for the day.</p>
 <p>This code sample doesn’t deviate much from the sample Databento offers to get you started with live data, but for a while this is what I used to watch real-time options order flow every weekday.</p>
-<div id="2bb76f6e" class="cell" data-execution_count="1">
+<div id="dca343a2" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> databento <span class="im">as</span> db</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>db.enable_logging(<span class="st">"INFO"</span>)</span>
@@ -241,7 +241,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Unfortunately, the raw output from the feed is very hard to read and follow what is happening with the options you’re interested in.</p>
 <p>In particular, the feed shows which option is which in the order flow via the <code>instrument_id</code>, but it’s a number, not a somewhat human-readable identifier (with issuer, date, and strike such as <code>GS 251219C00850000</code>). Or even better, a <em>Goldman Sachs December 2025 850 call</em>. The feed gives you a listing of what <code>instrument_id</code> is tied to which option and strike, but that happens when the feed first launches. After that, there’s no easy way to know what you’re looking at. That calls for some modifications!</p>
 <p>I cooked up something that makes order flow much more readable.</p>
-<div id="aef0aa25" class="cell" data-execution_count="2">
+<div id="54ff392e" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> databento <span class="im">as</span> db</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -311,7 +311,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>Updated OPRA order data flow from Databento in MacOS Terminal</figcaption>
 </figure>
 </div>
-<p>Of course, it could be improved even from here, but that’s for another day. [CFA(https://www.cfainstitute.org/)] and [CMT(https://www.cmtassociation.org)] studying awaits…</p>
+<p>Of course, it could be improved even from here, but that’s for another day. <a href="https://www.cfainstitute.org/">CFA</a> and <a href="https://www.cmtassociation.org">CMT</a> studying awaits…</p>
 
 
 
