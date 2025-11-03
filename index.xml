@@ -12,7 +12,7 @@
 <generator>quarto-1.8.25</generator>
 <lastBuildDate>Sun, 02 Nov 2025 04:00:00 GMT</lastBuildDate>
 <item>
-  <title>Post With Code</title>
+  <title>Live @ the OPRA - Watching options order flow</title>
   <dc:creator>Tiffani Ashley Bell</dc:creator>
   <link>https://tiffani.dev/posts/post-with-code/</link>
   <description><![CDATA[ 
@@ -21,7 +21,7 @@
 
 
 
-<p>This is a post with executable code.</p>
+<p>This is what I use to watch real-time options order flow every weekday.</p>
 <div id="fig-polar" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="1">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -43,9 +43,7 @@ font-style: inherit;">"GS    251219C00850000"</span>,]</span>
 <span id="cb1-6"></span>
 <span id="cb1-7">live_client <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">=</span> db.Live(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"db-La5MiWdqshV8EqAmLHHkvC3DbcbH6"</span>)</span>
+font-style: inherit;">=</span> db.Live(API_KEY)</span>
 <span id="cb1-8"></span>
 <span id="cb1-9">live_client.subscribe(</span>
 <span id="cb1-10">    dataset <span class="op" style="color: #5E5E5E;
