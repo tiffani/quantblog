@@ -24,7 +24,7 @@
 <p>I trade options via Interactive Brokers and their <a href="https://www.ibkrguides.com/traderworkstation/getting-started.htm">Trader Workstation</a> software. At a certain point, though, I realized their option chain interface did not always show the <em>true</em> last price a particular option traded at. Bid-ask info would be updated continuously, but not necessarily last price. I was then potentially <strong>getting a false sense of what was actually happening at any given strike</strong> and actually missing out on useful information. And the thing is, I pay for real-time data from the exchanges via IBKR, so there was no good reason to be seeing stale price data.</p>
 <p>I remembered that <a href="https://www.databento.com">Databento</a> offers real-time OPRA data feeds, so I decided to sign up for that. It’s $199/mo, but I would argue it’s been totally worth it to see options order flow in real-time all throughout the trading day. You also get statistics about all the options you’re interested in when the exchanges close for the day.</p>
 <p>This code sample doesn’t deviate much from the sample Databento offers to get you started with live data, but for a while this is what I used to watch real-time options order flow every weekday.</p>
-<div id="544e5ed4" class="cell" data-execution_count="1">
+<div id="d94ec465" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
 background-color: null;
 font-style: inherit;">import</span> databento <span class="im" style="color: #00769E;
@@ -129,6 +129,7 @@ font-style: inherit;">print</span>)</span>
  ]]></description>
   <category>code</category>
   <category>analysis</category>
+  <category>options</category>
   <guid>https://tiffani.dev/posts/post-with-code/</guid>
   <pubDate>Sun, 02 Nov 2025 04:00:00 GMT</pubDate>
   <media:content url="https://tiffani.dev/posts/post-with-code/opra-data.png" medium="image" type="image/png" height="88" width="144"/>
