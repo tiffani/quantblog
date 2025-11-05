@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/nautilus-trader-for-backtesting/on-using-nautilus-trader-for-backtesting.html",
       "/posts/live-at-the-opra-options-order-flow-data-with-python/index.html",
       "/posts/welcome/index.html"
     ]
