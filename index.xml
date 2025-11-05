@@ -10,35 +10,28 @@
 <atom:link href="https://tiffani.dev/index.xml" rel="self" type="application/rss+xml"/>
 <description>A place where I learn...</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Tue, 04 Nov 2025 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 07 Nov 2025 05:00:00 GMT</lastBuildDate>
 <item>
-  <title>On Backtesting with NautilusTrader</title>
+  <title>On Market Microstructure and Price Moves</title>
   <dc:creator>Tiffani Ashley Bell</dc:creator>
-  <link>https://tiffani.dev/posts/on-using-nautilus-trader-for-backtesting/</link>
+  <link>https://tiffani.dev/posts/on-market-microstructure-and-price-moves/</link>
   <description><![CDATA[ 
 
 
 
 
 
-<p>[In progress]</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://tiffani.dev/posts/on-using-nautilus-trader-for-backtesting/nautilus-backtesting.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshot from an early NautilusTrader run</figcaption>
-</figure>
-</div>
+<p>One area that I find to be endlessly fascinating is that of market microstructure.</p>
 
 
 
  ]]></description>
   <category>code</category>
-  <category>backtesting</category>
   <category>python</category>
-  <category>Nautilus Trader</category>
-  <guid>https://tiffani.dev/posts/on-using-nautilus-trader-for-backtesting/</guid>
-  <pubDate>Tue, 04 Nov 2025 05:00:00 GMT</pubDate>
-  <media:content url="https://tiffani.dev/posts/on-using-nautilus-trader-for-backtesting/nautilus-backtesting.png" medium="image" type="image/png" height="157" width="144"/>
+  <category>market microstructure</category>
+  <guid>https://tiffani.dev/posts/on-market-microstructure-and-price-moves/</guid>
+  <pubDate>Fri, 07 Nov 2025 05:00:00 GMT</pubDate>
+  <media:content url="https://tiffani.dev/posts/on-market-microstructure-and-price-moves/nautilus-backtesting.png" medium="image" type="image/png"/>
 </item>
 <item>
   <title>Live at the OPRA - Watching options order flow with Python</title>
