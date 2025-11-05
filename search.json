@@ -21,11 +21,11 @@
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
-    "objectID": "posts/nautilus-trader-for-backtesting/on-using-nautilus-trader-for-backtesting.html",
-    "href": "posts/nautilus-trader-for-backtesting/on-using-nautilus-trader-for-backtesting.html",
+    "objectID": "posts/on-using-nautilus-trader-for-backtesting/index.html",
+    "href": "posts/on-using-nautilus-trader-for-backtesting/index.html",
     "title": "On Backtesting with NautilusTrader",
     "section": "",
-    "text": "[In progress]"
+    "text": "[In progress]\n\n\n\nScreenshot from an early NautilusTrader run"
   },
   {
     "objectID": "index.html",

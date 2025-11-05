@@ -14,7 +14,7 @@
 <item>
   <title>On Backtesting with NautilusTrader</title>
   <dc:creator>Tiffani Ashley Bell</dc:creator>
-  <link>https://tiffani.dev/posts/nautilus-trader-for-backtesting/on-using-nautilus-trader-for-backtesting.html</link>
+  <link>https://tiffani.dev/posts/on-using-nautilus-trader-for-backtesting/</link>
   <description><![CDATA[ 
 
 
@@ -22,6 +22,12 @@
 
 
 <p>[In progress]</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://tiffani.dev/posts/on-using-nautilus-trader-for-backtesting/nautilus-backtesting.png" class="img-fluid figure-img"></p>
+<figcaption>Screenshot from an early NautilusTrader run</figcaption>
+</figure>
+</div>
 
 
 
@@ -30,9 +36,9 @@
   <category>backtesting</category>
   <category>python</category>
   <category>Nautilus Trader</category>
-  <guid>https://tiffani.dev/posts/nautilus-trader-for-backtesting/on-using-nautilus-trader-for-backtesting.html</guid>
+  <guid>https://tiffani.dev/posts/on-using-nautilus-trader-for-backtesting/</guid>
   <pubDate>Tue, 04 Nov 2025 05:00:00 GMT</pubDate>
-  <media:content url="https://tiffani.dev/posts/nautilus-trader-for-backtesting/nautilus-backtesting.png" medium="image" type="image/png" height="157" width="144"/>
+  <media:content url="https://tiffani.dev/posts/on-using-nautilus-trader-for-backtesting/nautilus-backtesting.png" medium="image" type="image/png" height="157" width="144"/>
 </item>
 <item>
   <title>Live at the OPRA - Watching options order flow with Python</title>
