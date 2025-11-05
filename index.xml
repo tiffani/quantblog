@@ -10,29 +10,7 @@
 <atom:link href="https://tiffani.dev/index.xml" rel="self" type="application/rss+xml"/>
 <description>A place where I learn...</description>
 <generator>quarto-1.8.25</generator>
-<lastBuildDate>Fri, 07 Nov 2025 05:00:00 GMT</lastBuildDate>
-<item>
-  <title>On Market Microstructure and Price Moves</title>
-  <dc:creator>Tiffani Ashley Bell</dc:creator>
-  <link>https://tiffani.dev/posts/on-market-microstructure-and-price-moves/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>One area that I find to be endlessly fascinating is that of market microstructure.</p>
-
-
-
- ]]></description>
-  <category>code</category>
-  <category>python</category>
-  <category>market microstructure</category>
-  <guid>https://tiffani.dev/posts/on-market-microstructure-and-price-moves/</guid>
-  <pubDate>Fri, 07 Nov 2025 05:00:00 GMT</pubDate>
-  <media:content url="https://tiffani.dev/posts/on-market-microstructure-and-price-moves/nautilus-backtesting.png" medium="image" type="image/png"/>
-</item>
+<lastBuildDate>Sun, 02 Nov 2025 04:00:00 GMT</lastBuildDate>
 <item>
   <title>Live at the OPRA - Watching options order flow with Python</title>
   <dc:creator>Tiffani Ashley Bell</dc:creator>

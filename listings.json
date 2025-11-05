@@ -2,7 +2,6 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/on-market-microstructure-and-price-moves/index.html",
       "/posts/live-at-the-opra-options-order-flow-data-with-python/index.html",
       "/posts/welcome/index.html"
     ]
