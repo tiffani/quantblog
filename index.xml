@@ -12,7 +12,7 @@
 <generator>quarto-1.8.25</generator>
 <lastBuildDate>Tue, 04 Nov 2025 05:00:00 GMT</lastBuildDate>
 <item>
-  <title>Live at the OPRA - Watching options order flow with Python</title>
+  <title>On Backtesting with NautilusTrader</title>
   <dc:creator>Tiffani Ashley Bell</dc:creator>
   <link>https://tiffani.dev/posts/nautilus-trader-for-backtesting/on-using-nautilus-trader-for-backtesting.html</link>
   <description><![CDATA[ 
@@ -31,7 +31,7 @@
   <category>python</category>
   <guid>https://tiffani.dev/posts/nautilus-trader-for-backtesting/on-using-nautilus-trader-for-backtesting.html</guid>
   <pubDate>Tue, 04 Nov 2025 05:00:00 GMT</pubDate>
-  <media:content url="https://tiffani.dev/posts/nautilus-trader-for-backtesting/opra-data.png" medium="image" type="image/png"/>
+  <media:content url="https://tiffani.dev/posts/nautilus-trader-for-backtesting/nautilus-backtesting.png" medium="image" type="image/png" height="157" width="144"/>
 </item>
 <item>
   <title>Live at the OPRA - Watching options order flow with Python</title>
