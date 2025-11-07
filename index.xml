@@ -2025,6 +2025,10 @@ font-style: inherit;">7</span>)</span>
 <p>Elder himself admits that the “…negative side of Chandelier Exits is that they give up a great deal of profit. Three Average True Ranges can amount to a lot of money in a volatile market.” He recommends experimenting with the Average True Range coefficient (<code>ATR_MULTIPLIER</code> in my code).</p>
 <p>The code listed here does not include the portion that takes a volatility and calculates the option price to set a stop. I will update with that soon.</p>
 <p>Finally, some of this code could be cleaned up. The Interactive Brokers API callback methods are mostly from their developer documentation.</p>
+</section>
+<section id="an-update" class="level3">
+<h3 class="anchored" data-anchor-id="an-update">An update</h3>
+<p>Funny enough, this stop triggered right at opening on November 7 after a bad Michigan consumer sentiment reading and tech stock drama. <code>SPY</code> slid to a low of $661.21 after this triggered. There probably could be some work around giving these stops a bit more breathing room (<code>SPY</code> only had to move 0.2% to trigger it which could come from opening volatility some days), but this was still great to see it activate and see <code>SPY</code> continue to fall after this stop was activated, preserving (paper) funds. That really illustrates the power of stops (ignoring stop hunters, etc.).</p>
 
 
 </section>
