@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/on-volatility-driven-stops-chandelier-stops-in-ibkr/index.html",
       "/posts/live-at-the-opra-options-order-flow-data-with-python/index.html",
       "/posts/welcome/index.html"
     ]
