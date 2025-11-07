@@ -28,7 +28,7 @@
 <p>I experienced a gain of 584.8% on a GS Oct 2026 800 call after GS rocketed to that all-time-high. Unfortunately, my stop did not hug this position tightly enough and in the subsequent drop gave back nearly half those gains. This was sad and preventable!</p>
 </section>
 <section id="what-is-a-chandelier-stop" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-a-chandelier-stop">What is a chandelier stop</h3>
+<h3 class="anchored" data-anchor-id="what-is-a-chandelier-stop">What is a “chandelier stop”?</h3>
 <p>Interactive Brokers’s Trader Workstation offers trailing stops. They are fixed, however. You can set a percentage or a fixed value for the stop. But, then you must through the rigamarole of determining what percentage or absolute value to use. And even after you do that, though, that’s it. The parameter you set for how wide (permissive) or how narrow (restrictive) your trailing stop is doesn’t change.</p>
 <p>I have been wanting to understand if having a stop that adjusts dynamically based on an underlying’s volatility made sense. And hey! It turns out this exists and it is called a <strong>chandelier stop</strong>. I first read about this in Dr.&nbsp;Alexander Elder’s <em>Come Into My Trading Room</em>. <strong>It uses the average true range of an underlying to turn volatility into a way to determine where stops should go.</strong></p>
 <p>A chandelier stop is set with volatility in mind and may retreat as prices move around. This is basically the mechanical embodiment of <em>breathing room</em>. It can be used for both entries and exits.</p>
