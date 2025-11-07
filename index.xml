@@ -2012,7 +2012,7 @@ font-style: inherit;">7</span>)</span>
 <span id="cb1-348">    update_once(ib_client)</span>
 <span id="cb1-349">    </span></code></pre></div>
 </div>
-<p>And when it runs, this is what you get! This run is based on my paper trading account with an existing <code>SPY</code> position I bought when it was at $540.59-ish.</p>
+<p>And when it runs, this is what you get! This run is based on my paper trading account with an existing <code>SPY</code> position (shares, not options) I bought when it was at $540.59-ish.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://tiffani.dev/posts/on-volatility-driven-stops-chandelier-stops-in-ibkr/chandelier-output.png" class="img-fluid figure-img"></p>
