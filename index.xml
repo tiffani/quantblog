@@ -2433,26 +2433,5 @@ font-style: inherit;">"parent"</span>,</span>
   <pubDate>Sun, 02 Nov 2025 04:00:00 GMT</pubDate>
   <media:content url="https://tiffani.dev/posts/live-at-the-opra-options-order-flow-data-with-python/opra-data.png" medium="image" type="image/png" height="88" width="144"/>
 </item>
-<item>
-  <title>Welcome To My Blog</title>
-  <dc:creator>Tiffani Ashley Bell</dc:creator>
-  <link>https://tiffani.dev/posts/welcome/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>This is the first post in a Quarto blog. Welcome!</p>
-<p><img src="https://tiffani.dev/posts/welcome/thumbnail.jpg" class="img-fluid"></p>
-<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
-
-
-
- ]]></description>
-  <category>news</category>
-  <guid>https://tiffani.dev/posts/welcome/</guid>
-  <pubDate>Thu, 30 Oct 2025 04:00:00 GMT</pubDate>
-</item>
 </channel>
 </rss>
