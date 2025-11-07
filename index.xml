@@ -2015,7 +2015,7 @@ font-style: inherit;">7</span>)</span>
 <p>And when it runs, this is what you get! This run is based on my paper trading account with an existing <code>SPY</code> position (shares, not options) I bought when it was at $540.59-ish.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://tiffani.dev/posts/on-volatility-driven-stops-chandelier-stops-in-ibkr/chandelier-output.png" class="img-fluid figure-img"></p>
+<p><img src="https://tiffani.dev/posts/on-volatility-driven-stops-chandelier-stops-in-ibkr/chandelier-output-1.png" class="img-fluid figure-img"></p>
 <figcaption>Chandelier stop paper trading account run</figcaption>
 </figure>
 </div>
@@ -2037,7 +2037,7 @@ font-style: inherit;">7</span>)</span>
   <category>APIs</category>
   <guid>https://tiffani.dev/posts/on-volatility-driven-stops-chandelier-stops-in-ibkr/</guid>
   <pubDate>Thu, 06 Nov 2025 05:00:00 GMT</pubDate>
-  <media:content url="https://tiffani.dev/posts/on-volatility-driven-stops-chandelier-stops-in-ibkr/chandelier-output.png" medium="image" type="image/png" height="118" width="144"/>
+  <media:content url="https://tiffani.dev/posts/on-volatility-driven-stops-chandelier-stops-in-ibkr/chandelier-output-1.png" medium="image" type="image/png" height="118" width="144"/>
 </item>
 <item>
   <title>Live at the OPRA - Watching options order flow with Python</title>
