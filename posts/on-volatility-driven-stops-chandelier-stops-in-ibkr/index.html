@@ -309,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-71"><a href="#cb1-71"></a>        current_price <span class="op">=</span> data[<span class="st">'Close'</span>][ticker].iloc[<span class="op">-</span><span class="dv">1</span>]</span>
 <span id="cb1-72"><a href="#cb1-72"></a>        highest_high <span class="op">=</span> data[<span class="st">'High'</span>][ticker].tail(period).<span class="bu">max</span>()</span>
 <span id="cb1-73"><a href="#cb1-73"></a>        </span>
-<span id="cb1-74"><a href="#cb1-74"></a>        <span class="co"># Chandelier Stop = Highest High - (Multiplier × ATR)</span></span>
+<span id="cb1-74"><a href="#cb1-74"></a>        <span class="co"># Chandelier Stop = Highest High - (Multiplier * ATR)</span></span>
 <span id="cb1-75"><a href="#cb1-75"></a>        stop_level <span class="op">=</span> round_to_nickel(highest_high <span class="op">-</span> (multiplier <span class="op">*</span> current_atr))</span>
 <span id="cb1-76"><a href="#cb1-76"></a>        </span>
 <span id="cb1-77"><a href="#cb1-77"></a>        <span class="co"># Calculate distance to stop as percentage</span></span>
