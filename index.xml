@@ -2028,7 +2028,7 @@ font-style: inherit;">7</span>)</span>
 </section>
 <section id="an-update" class="level3">
 <h3 class="anchored" data-anchor-id="an-update">An update</h3>
-<p>Funny enough, this stop triggered right at opening on November 7 after a bad Michigan consumer sentiment reading and tech stock sell-offs. <code>SPY</code> slid to a low of $661.21 after this triggered. There probably could be some work around giving these stops a bit more breathing room (<code>SPY</code> only had to move 0.2% to the downside to trigger it which could easily come from opening volatility some days), but this was still great to see it activate and see <code>SPY</code> continue to fall after this stop was activated, preserving (paper) funds. That really illustrates the power of stops (ignoring stop hunters, etc.).</p>
+<p>Funny enough, this stop triggered right at opening on November 7 after a bad Michigan consumer sentiment reading and tech stock sell-offs. <code>SPY</code> slid to a low of $661.21 after this triggered. There probably could be some work around giving these stops a bit more breathing room (<code>SPY</code> only had to move 0.2% to the downside to trigger it which could easily come from opening volatility some days), but this was still great to see it activate and see <code>SPY</code> continue to fall after this stop was activated, preserving (paper) funds. That really illustrates the power of stops (ignoring stop hunters and quick bouncebacks which could be dealt with by more breating room, etc.).</p>
 
 
 </section>
