@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Tiffani Ashley Bell">
+<meta name="dcterms.date" content="2026-08-25">
 
-<title>Musings</title>
+<title>CFA Level 1: A reflection and a pre-reg – Musings</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a8976c3e89df70b272bdfba3d2fda974.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-a8976c3e89df70b272bdfba3d2fda974.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,86 +70,30 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Musings" href="index.xml" data-external="1"><meta property="og:title" content="Musings">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="CFA Level 1: A reflection and a pre-reg – Musings">
+<meta property="og:description" content="A place where I learn…">
 <meta property="og:image" content="https://tiffani.dev/posts/on-the-cfa-l1-exam/cfa-l1-books.jpg">
 <meta property="og:site_name" content="Musings">
-<meta name="twitter:title" content="Musings">
+<meta name="twitter:title" content="CFA Level 1: A reflection and a pre-reg – Musings">
+<meta name="twitter:description" content="A place where I learn…">
 <meta name="twitter:image" content="https://tiffani.dev/posts/on-the-cfa-l1-exam/cfa-l1-books.jpg">
 <meta name="twitter:creator" content="@tiffani">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Musings</span>
     </a>
   </div>
@@ -160,7 +104,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -183,150 +127,84 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Musings</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">CFA Level 1: A reflection and a pre-reg</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">cfa</div>
+                <div class="quarto-category">exams</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Tiffani Ashley Bell </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 25, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="QVBJcw==">APIs <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2Zh">cfa <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RGF0YWJlbnRv">Databento <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZXhhbXM=">exams <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW50ZXJhY3RpdmUlMjBCcm9rZXJz">Interactive Brokers <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFya2V0JTIwbWljcm9zdHJ1Y3R1cmU=">market microstructure <span class="quarto-category-count">(1)</span></div><div class="category" data-category="b3B0aW9ucw==">options <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cmlzayUyMG1hbmFnZW1lbnQ=">risk management <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Y2ZhJTJDZXhhbXM=" data-listing-date-sort="1787630400000" data-listing-file-modified-sort="1787684801521" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1112">
-<div class="thumbnail"><a href="./posts/on-the-cfa-l1-exam/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/on-the-cfa-l1-exam/cfa-l1-books.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/on-the-cfa-l1-exam/index.html" class="no-external">CFA Level 1: A reflection and a pre-reg</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y2Zh'); return false;">cfa</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZXhhbXM='); return false;">exams</div>
-
+<p>It’s Tuesday, August 25th, 2026 and I am about 4 days out from having taken the CFA L1 exam. It wasn’t terrible. I am writing this post both as a reflection of the exam, and also to sort of pre-register my experience. So if I pass, I will not do a disingenuous gloat-post about how I already knew I’d pass, with a bunch of phony, post-hoc reasons why I did (haha).</p>
+<p>I am giggling a bit as I write this because, as I said in the voice note I sent to a friend in the test center parking lot, I actually enjoyed taking the exam. I enjoyed it so much that I was giggling and smiling to myself while reading certain questions. I know I was frustrating the proctor at one point, because on the overhead surveillance cameras I probably looked suspicious. The proctor kept walking by my desk and at one point, she paused from pacing and stood behind me to my right for a few seconds. I ignored her and continued smiling at the screen.</p>
+<section id="exam-perceptions" class="level3">
+<h3 class="anchored" data-anchor-id="exam-perceptions">Exam perceptions</h3>
+<p>I thought the exam (my version of it, at least) was pretty straightforward, almost to the point of being easy. There was only one question (out of 180) where I didn’t recall seeing the related concept at all. (By my highlighter patterns, it was something I had read in the first few months of studying. I never made any notes for it or revisited it, though.) Otherwise, there were no surprises.</p>
+<p>To me, the exam mirrored the official CFAI mock exams. The questions were very straightforward. The answer choices were likely to be tricks to catch you confusing one thing for another, but otherwise that was it. And I definitely fell for a few tricks. But, not very many.</p>
+<p>Crucially, I didn’t leave any questions blank (even for questions where I drew a blank and could not come up with my own answer). There’s no penalty for wrong answers, so you have every incentive to answer every question—even if you just guess. With a lot of questions, you could intelligently eliminate at least one answer choice if you vaguely understood/remembered the concept. And the test software literally lets you mark off answer choices to make guessing easier.</p>
+<p>I guessed on about 10-15 questions per session (there are two sessions), with slightly more guessing in the second session. The second session included more of the content I hadn’t reached. Now, why hadn’t I finished the entire curriculum? There’s a good reason.</p>
+<p>While studying for the CFA exam, I studied for and passed two out of three levels of an entirely different financial-related charter program—the <a href="https://cmtassociation.org/">Chartered Market Technician (CMT) program</a>. This program is not as well known, but just as rigorous and intense, with hundreds of pages of deeply technical reading on markets and technical analysis per level (there are 3). This worked for a bit because there is some overlap in the content between the two exams. I was scheduled to take the third and final CMT exam in June/July, but deferred as it was running up against the CFA too much. (There is a reason I had all of this stuff overlapping that perhaps I will explain another time.)</p>
+<p>I had a moment of frustration because there were definitely questions from content I didn’t reach (or hadn’t spent as much time on as others). And unfortunately, some of that content was from a more heavily-weighted topic on the exam. But, again, I tried to intelligently guess and move on. It was useless to try to spend any real time on those kind of questions as doing that stole time from questions I could answer. This was especially true if those questions involved any kind of calculation and needed to be completed more carefully and/or double-checked.</p>
+</section>
+<section id="a-quick-word-on-test-prep" class="level3">
+<h3 class="anchored" data-anchor-id="a-quick-word-on-test-prep">A quick word on test prep</h3>
+<p>As for preparation, I did not use any of the test prep providers like Kaplan-Schweser or Mark Meldrum. I had already paid $1,140 to sign up for the exam itself, so I didn’t want to shell out another $1,000 for more study materials. I simply paid another $250 or so for a 13lb. box of the printed CFAI curriculum materials (nearly 4,000 pages), but that was it.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cfa-l1-books.jpg" class="img-fluid figure-img"></p>
+<figcaption>The CFA L1 prep stack (ignore the L2 book on fixed income!)</figcaption>
+</figure>
 </div>
-<div class="delink listing-description"><a href="./posts/on-the-cfa-l1-exam/index.html" class="no-external">
-It’s Tuesday, August 25th, 2026 and I am about 4 days out from having taken the CFA L1 exam. It wasn’t terrible. I am writing this post both as a reflection of the exam, and…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/on-the-cfa-l1-exam/index.html" class="no-external">
-<div class="listing-date">
-Aug 25, 2026
-</div>
-<div class="listing-author">
-Tiffani Ashley Bell
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Y29kZSUyQ1B5dGhvbiUyQ3Jpc2slMjBtYW5hZ2VtZW50JTJDSW50ZXJhY3RpdmUlMjBCcm9rZXJzJTJDQVBJcw==" data-listing-date-sort="1762405200000" data-listing-file-modified-sort="1763248724365" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="21" data-listing-word-count-sort="4156">
-<div class="thumbnail"><a href="./posts/on-volatility-driven-stops-chandelier-stops-in-ibkr/index.html" class="no-external">
+</section>
+<section id="great-expectations" class="level3">
+<h3 class="anchored" data-anchor-id="great-expectations">Great expectations?</h3>
+<p>I also think I had a misconception of what to expect—which shaped how I studied and what content I emphasized. I was expecting to have to <em>do</em> certain things on the exam. I signed up for the CFA exam in the first place because I wanted to learn to <em>do</em> certain things and their curriculum looked like a clean, concise way to learn. I definitely learned from the readings and working on side projects during studying that solidified certain concepts beyond the textbook examples and beyond what I’d learned in business school.</p>
+<p>On the exam, though, with the topics I have in mind, there were just questions about the theory of the concept rather than explicitly making you do anything related to the concept. (If that sounds weird and vague, I am trying to avoid committing an ethical violation by divulging exam content.) I am hearing, however, that L2 should take care of the application I was expecting. NICE.</p>
+</section>
+<section id="and-in-sum" class="level3">
+<h3 class="anchored" data-anchor-id="and-in-sum">And in sum…</h3>
+<p>Overall the CFA Level 1 exam is entirely doable and conquerable—even if CFAI statistics say most people fail (only 45% of the 24,000+ candidates from February 2026 passed). <em>And I say that without knowing my results at the moment</em>. If anything, how difficult you view the exam seems to be a product of how you studied, how much you studied, and most importantly, <em>what you retained</em> and can remember under exam conditions. Retention seems to slip a lot of people up. I certainly drew a blank on a few questions.</p>
+<p>Reddit is not a representative sample of test takers, but there are so many posts there where people finished reading the entire curriculum but didn’t remember much of what they read. I was able to beat the forgetting curve by how I studied (happy to write another post later on those methods). So, <strong>my issues came from not evenly reviewing everything and just simply not getting to everything—partly because I was studying for and passing a whole other exam</strong>. The pattern of missing what I hadn’t read or properly reviewed showed up pretty strongly in my mocks.</p>
+<p>So, <strong>if I do not pass, it will be because of uneven reviews and not finishing the curriculum</strong>. Not because the L1 exam was hard. But to be fair, I totally understand why people experience it as being hard.</p>
+<p>Either way, I got a ton out of studying for the exam in the first place.</p>
 
-<img loading="lazy" src="./posts/on-volatility-driven-stops-chandelier-stops-in-ibkr/chandelier-output-1.png" class="thumbnail-image">
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/on-volatility-driven-stops-chandelier-stops-in-ibkr/index.html" class="no-external">On Volatility-Driven Trailing Stops - Chandelier Stops via the Interactive Brokers API</a>
-</h3>
-<div class="listing-categories">
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmlzayUyMG1hbmFnZW1lbnQ='); return false;">risk management</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SW50ZXJhY3RpdmUlMjBCcm9rZXJz'); return false;">Interactive Brokers</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('QVBJcw=='); return false;">APIs</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/on-volatility-driven-stops-chandelier-stops-in-ibkr/index.html" class="no-external">
-Having a better methodology for stops and capturing unrealized gains became super important after a certain set of recent disappointing trades. Goldman ran up to an…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/on-volatility-driven-stops-chandelier-stops-in-ibkr/index.html" class="no-external">
-<div class="listing-date">
-Nov 6, 2025
-</div>
-<div class="listing-author">
-Tiffani Ashley Bell
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Y29kZSUyQ29wdGlvbnMlMkNQeXRob24lMkNEYXRhYmVudG8lMkNtYXJrZXQlMjBtaWNyb3N0cnVjdHVyZQ==" data-listing-date-sort="1762056000000" data-listing-file-modified-sort="1762403491602" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="828">
-<div class="thumbnail"><a href="./posts/live-at-the-opra-options-order-flow-data-with-python/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/live-at-the-opra-options-order-flow-data-with-python/opra-data.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/live-at-the-opra-options-order-flow-data-with-python/index.html" class="no-external">Live at the OPRA - Watching options order flow with Python</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">code</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('b3B0aW9ucw=='); return false;">options</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YWJlbnRv'); return false;">Databento</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWFya2V0JTIwbWljcm9zdHJ1Y3R1cmU='); return false;">market microstructure</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/live-at-the-opra-options-order-flow-data-with-python/index.html" class="no-external">
-I trade options via Interactive Brokers and their Trader Workstation software. At a certain point, though, I realized their option chain interface did not always show the <em>true</em>…<strong></strong>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/live-at-the-opra-options-order-flow-data-with-python/index.html" class="no-external">
-<div class="listing-date">
-Nov 2, 2025
-</div>
-<div class="listing-author">
-Tiffani Ashley Bell
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
