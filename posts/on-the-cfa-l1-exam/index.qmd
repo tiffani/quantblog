@@ -2,7 +2,7 @@
 title: "CFA Level 1: A reflection and a pre-reg (of results)"
 author: "Tiffani Ashley Bell"
 date: "2026-08-25"
-categories: [cfa, exams]
+categories: [CFA, exams]
 image: "cfa-l1-books.jpg"
 draft: false
 ---
