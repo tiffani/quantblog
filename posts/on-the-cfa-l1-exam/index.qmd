@@ -19,7 +19,7 @@ To me, the exam mirrored the official CFAI mock exams. The questions were clearl
 
 Crucially, I didn’t leave any questions blank (even for questions where I drew a blank and could not come up with my own answer). There’s no penalty for wrong answers, so you have every incentive to answer every question—even if you just guess. With a lot of questions, I could intelligently eliminate at least one answer choice if I vaguely understood/remembered the concept. The test software has a way to cross out answer choices to make guessing easier.
 
-I guessed on about 10-15 questions per session (there are two sessions), with slightly more guessing in the second session. The second session included more of the content I hadn’t reached. Now, why hadn’t I finished the entire curriculum? There’s a good reason.
+I guessed on about 10-15 questions per session (there are two sessions), with slightly more guessing in the second session. The second session included more of the content I hadn’t reached. So, why hadn’t I finished the entire curriculum? There’s a good reason.
 
 **While studying for the CFA exam, I studied for and passed two out of three levels of an entirely different finance and trading-related credential**—the [Chartered Market Technician (CMT) program](https://cmtassociation.org/). This program is not as well known, but just as rigorous and intense, with hundreds of pages of deeply technical reading on markets and [technical analysis](https://en.wikipedia.org/wiki/Technical_analysis) per level (there are 3). Studying for both at the same time worked for a bit as there is some overlap in the [content between the two exams](https://cmtassociation.org/wp-content/uploads/2025/02/2025-Detailed-CMT-Program-Guide.pdf). 
 
