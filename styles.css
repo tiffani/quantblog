@@ -34,7 +34,7 @@ code, pre code {
   font-display: swap;
 }
 
-body {
+body, div.metadata, div.listing-category, div.listing-author, div.listing-date {
   font-family: "Goldman Sans", -apple-system, "Segoe UI",
                           Roboto, Helvetica, Arial, sans-serif;
 }
