@@ -1,17 +1,26 @@
 project:
   type: website
+  resources:
+    - fonts/
 
 website:
-  description: "A place where I learn..."
-  site-url: "https://tiffani.dev/" # you must change this appropriately for RSS feeds to work properly
-  title: "Musings"
+  title: "Tiffani Ashley Bell"                      # was "Musings" — this becomes every page's <title> suffix and og:site_name
+  description: "Tiffani Ashley Bell writes about quantitative finance, options markets, and Python. Founder of The Human Utility (Y Combinator-backed nonprofit), TED speaker, Stanford GSB and Howard alum."
+  site-url: "https://tiffani.dev"                   # dropped trailing slash so canonical URLs and sitemap don't double up
+  favicon: profile.jpg                              # optional, but Google shows favicons in results now
+  twitter-card:
+    creator: "@tiffani"
+    site: "@tiffani"
+  open-graph: true
   navbar:
+    title: "Musings"                                # keeps the navbar wordmark you had; only the metadata title changes
     right:
       - about.qmd
       - icon: github
         href: https://github.com/tiffani
       - icon: twitter
         href: https://twitter.com/tiffani
+
 format:
   html:
     theme:
@@ -19,6 +28,4 @@ format:
       - brand
     css: styles.css
     code-copy: true
-
-
-
+    include-in-header: person-schema.html           # new file, contents below

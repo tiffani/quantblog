@@ -16,4 +16,22 @@ about:
 
 ---
 
-About this blog
+Tiffani puts code here, mostly.
+
+### More about Tiffani
+
+Tiffani Ashley Bell is the Founding Executive Director of [The Human Utility](https://www.detroitwaterproject.org), a platform bringing people together from around the world to help people in the United States with their water bills.
+
+The Human Utility has helped thousands people with over $1MM in crowdfunded assistance and is a [Y Combinator-backed](https://www.ycombinator.com/companies/the-human-utility) not-for-profit.
+
+Tiffani was a 2017 Technology & Democracy Fellow at the Harvard Kennedy School of Government researching water affordability and designing a water affordability subsidy. She was a 2014 [Code for America](https://codeforamerica.org/people/tiffani-bell/) Fellow. Previously, she was the CEO and Founder of Pencil You In, enabling over 2,000 local businesses to accept appointments online, bringing many of them online for the first time.
+
+Tiffani is a programmer who earned a Bachelor of Science in Systems & Computer Science from Howard University. As a programmer, she has given back to the profession by keynoting numerous technical conferences including two of the largest: the O'Reilly Open Source Conference (OSCON) and GitHub Universe. In 2015, she presented a paper on the use of programming and data science in designing a water affordability intervention at the Bloomberg Data for Good Exchange (D4GX) conference. 
+
+She spoke at [TED](https://go.ted.com/tiffani) in 2022, where was dubbed "Humanitarian Programmer".
+
+Tiffani graduated in 2021 as a Sloan Fellow from the Stanford Graduate School of Business with a Master of Science in Management. She graduated in 2008 with a Bachelor of Science in Systems and Computer Science from Howard University.
+
+She is a startup investor with investments in amazing companies such as [Finix](https://www.finix.com) (payments), [Goodr](https://goodr.co) (surplus food), [ElectricFish](https://electricfish.co/) (energy infrastructure) and [Charityvest](https://www.charityvest.org/) (DAF/charity software - exited), amongst others.
+
+Finally, Tiffani is a [Chartered Financial Analyst](https://www.cfainstitute.org) (CFA) Level 1 candidate and a [Chartered Market Technician](https://www.cmtassociation.org) (CMT) Level 3 candidate.
