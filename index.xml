@@ -5,10 +5,10 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Musings</title>
+<title>Tiffani Ashley Bell</title>
 <link>https://tiffani.dev/</link>
 <atom:link href="https://tiffani.dev/index.xml" rel="self" type="application/rss+xml"/>
-<description>A place where I learn...</description>
+<description>Tiffani Ashley Bell writes about quantitative finance, options markets, and Python. Founder of The Human Utility (Y Combinator-backed nonprofit), TED speaker, Stanford GSB and Howard alum.</description>
 <generator>quarto-1.8.25</generator>
 <lastBuildDate>Tue, 25 Aug 2026 04:00:00 GMT</lastBuildDate>
 <item>
