@@ -3,6 +3,7 @@ title: "Welcome To My Blog"
 author: "Tiffani Ashley Bell"
 date: "2025-10-30"
 categories: [news]
+draft: true
 ---
 
 This is the first post in a Quarto blog. Welcome!

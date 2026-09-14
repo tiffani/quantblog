@@ -1,0 +1,12 @@
+---
+title: "On Backtesting with NautilusTrader"
+author: "Tiffani Ashley Bell"
+date: "2025-11-04"
+categories: [code, backtesting, python, "Nautilus Trader"]
+image: "nautilus-backtesting.png"
+draft: true
+---
+
+[In progress]
+
+![Screenshot from an early NautilusTrader run](nautilus-backtesting.png)

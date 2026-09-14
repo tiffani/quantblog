@@ -1,0 +1,10 @@
+---
+title: "On Market Microstructure and Price Moves"
+author: "Tiffani Ashley Bell"
+date: "2025-11-07"
+categories: [code, python, "market microstructure"]
+image: "nautilus-backtesting.png"
+draft: true
+---
+
+One area that I find to be endlessly fascinating is that of market microstructure. 
